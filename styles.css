@@ -1,0 +1,368 @@
+/* styles.css */
+html, body {
+    overflow-x: hidden;
+}
+
+body{
+    color: #3A4D39;
+    background-color: #3A4D39;
+    margin: 0;
+    font-family: "Anaheim";
+    font-size: x-large;
+    font-weight: 400;
+}
+
+.title, .links, .image, .subtitle, .text, .images, .footer, .socialLinks{
+    display: flex;
+    justify-content: center;
+}
+
+.title{
+    color: black;
+}
+
+.about{
+    height: 600px;
+    padding: 25px 25px 0;
+    display: flex;
+    background-color: #4F6F52;
+    color: #000;
+    justify-content:center;
+    align-items: center;
+}
+
+#headshot{
+    height: 600px;
+    position: absolute;
+    left: 15%;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 2s 0.5s forwards;
+    display: block;
+    filter: drop-shadow(7px 0px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+}
+
+#aboutMe{
+    position: absolute;
+    margin: 25px;
+    width: 500px;
+    left: -600px;
+    z-index: 1;
+    animation: fromFarLeft 3s 2s forwards;
+}
+
+@keyframes fromFarLeft {
+    0%{transform: translateX(-500px);}
+    100%{transform: translateX(1300px);}
+}
+
+.image{
+    background-color: #3A4D39;
+    height: 250px;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lineOfWork{
+    height: 125px;
+    padding: 25px;
+    background-color: #ECE3CE;
+    transition: font-size, background-color, color, 0.5s;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+#dev:hover, #animator:hover, #musician:hover{
+    font-size: larger;
+    font-weight: bolder;
+    background-color: #c6b89c;
+    color: black;
+}
+
+.subtitle{
+    text-shadow: 2px 2px  rgba(0, 0, 0, 0.2);
+}
+
+#dev .subtitle, #projectsSubtitle{
+    font-family: 'Noto Sans Mono';font-size: 22px;
+}
+
+#animator{
+    background-color: #4F6F52;
+    color: #252525;
+}
+
+#animator .subtitle, #animations .subtitle{
+    font-family: 'Permanent Marker';font-size: 22px;
+}
+
+#musician .subtitle{
+    font-family: 'Sedgwick Ave Display';font-size: 22px;
+}
+
+.images{
+    padding: 0 25px;
+    align-items: center;
+}
+
+#images1{
+    background-color: #4F6F52;
+    padding-top: 25px;
+}
+
+#images2{
+    background-color: #3A4D39;
+}
+
+#images3{
+    background-color: #4F6F52;
+    padding-bottom: 25px;
+}
+
+.images img{
+    margin: 25px;
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    overflow: hidden;
+    box-shadow:  4px 6px rgba(0, 0, 0, 0.1);
+    transition: width, height, box-shadow, 0.5s;
+}
+
+.images img:hover{
+    width: 475px;
+    height: 475px;
+    margin: 12px 13px;
+    box-shadow:  8px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pageHeader{
+    padding: 15px;
+    background-color: #ECE3CE;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#animationsSubtitle, #projectsSubtitle{
+    z-index: 2;
+}
+
+#mainGif{
+    cursor: pointer;
+    position: absolute;
+    left: -150px;
+    animation: walk 12s linear infinite;
+    z-index: 3;
+    display: block;
+    filter: drop-shadow(0px 5px 1px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes walk {
+    0%{transform: translateX(-100%);}
+    100%{transform: translateX(2000px);}
+}
+
+#shipGif{
+    transform: rotate(270deg);
+    position: absolute;
+    left: 2400px;
+    animation: fly 5s linear infinite;
+    z-index: 3;
+}
+
+@keyframes fly {
+    0% {
+        transform: rotate(270deg) translateY(0);
+    }
+    100% {
+        transform: rotate(270deg) translateY(-3000px);
+    }
+}
+
+.video, .feltgame{
+    background-color:#c6b89c;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px;
+}
+
+.description{
+    background-color: rgb(1, 1, 1, 0.1);
+    padding: 25px;
+    width: 500px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+    max-height: 300px;
+    overflow: hidden;
+    color: #000;
+}
+
+#game-description{
+    max-height: fit-content;
+}
+
+.video iframe {
+    max-height: 400px;
+    width: 560px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+#felt iframe{
+    width: 420px;
+}
+
+#ffff iframe, #bunny iframe{
+    animation-name: fromLeft;
+    animation-duration: 2s;
+    margin-left: 50px;
+}
+
+#ffff, #bunny{
+    background-color: #739072;
+}
+
+#ffff .description, #bunny.description{
+    margin-right: 50px;
+}
+
+#felt iframe{
+    animation-name: fromRight;
+    animation-duration: 2s;
+    margin-right: 100px;
+}
+#felt .description{
+    margin-left: 100px;
+}
+.feltgame img, .feltgame iframe{
+    display: block;
+    filter: drop-shadow(7px 7px rgba(0, 0, 0, 0.2));
+}
+
+
+@keyframes fromLeft {
+    0%{transform: translateX(-1000px);}
+    100%{transform: translateX(0);}
+}
+
+@keyframes fromRight {
+    0%{transform: translateX(1000px);}
+    100%{transform: translateX(0);}
+}
+
+
+.footer{
+    background-color: #ECE3CE;
+    padding-top: 25px;
+    color:#739072;
+    align-items: center;
+    flex-direction: column;
+}
+
+.socialLinks{
+    margin: 10px;
+    gap: 10px;
+}
+.socialLinks a{
+    color:#4F6F52;
+    transition: color 0.5s;
+}
+
+#linkedIn:hover{
+    color:dodgerblue;
+}
+
+#youtube:hover{
+    color:red;
+}
+
+#spotify:hover{
+    color: limegreen;
+}
+
+#home:hover{
+    color: #000;
+}
+
+
+#asteroid1{
+    position: absolute;
+    left: 0px;
+    top: 150p;
+    animation: asteroid 5s linear;
+    cursor: pointer;
+    transition: left 7s linear, top 7s linear;
+}
+
+#score {
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
+    position: fixed;
+    z-index: 100;
+    color: #0dff00;
+    padding: 15px;
+    
+}
+
+#blasteroid-game{
+    background-color: #4F6F52;
+}
+#felt-knight-game{
+    background-color: #c6b89c;
+}
+
+.screenshot{
+    width: 650px;
+    height: 350px;
+    object-fit: cover;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.game {
+    flex-direction: column;
+    background-color:#c6b89c;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px;
+}
+
+.game-description{
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.game-extras{
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px 0;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(7px 7px rgba(0, 0, 0, 0.2));
+}
+
+.game-extras img{
+    height: 165px;
+    padding-bottom: 25px;
+}
