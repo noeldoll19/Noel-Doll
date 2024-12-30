@@ -114,7 +114,7 @@ a {
     font-family: 'Permanent Marker';font-size: 22px;
 }
 
-#musician .subtitle{
+#musician .subtitle, #musicSubtitle{
     font-family: 'Sedgwick Ave Display';font-size: 22px;
 }
 
@@ -365,4 +365,30 @@ a {
 
 #game-description{
     width: 650px;
+}
+
+
+.musicList{
+    background-color: #c6b89c;
+    display: flex;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 3s linear infinite;
+    font-weight: 1000;
+}
+
+@keyframes pulse {
+    0%{
+        opacity: 0.1;
+        font-size: small;
+    }
+    50%{
+        opacity: 1;
+        font-size: x-large;
+    }
+    100%{
+        opacity: 0.1;
+        font-size: small;
+    }
 }
