@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function startFromLeft(){
         asteroid.style.transition = 'None';
-        asteroid.style.left = '-150px';
+        asteroid.style.left = '-15vw';
         const startTop = Math.floor(Math.random() * 1701 - 200);
         asteroid.style.top = startTop + 'px';
         setTimeout(() => {
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function startFromRight(){
         asteroid.style.transition = 'None';
-        asteroid.style.left = '1550px';
+        asteroid.style.left = '115vw';
         const startTop = Math.floor(Math.random() * 1701 - 200);
         asteroid.style.top = startTop + 'px';
         setTimeout(() => {
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         duration = Math.max(Math.floor(Math.random() * 7), 5);
         asteroid.style.transition = 'left ' + duration + 's linear, top ' + duration +'s linear';
-        asteroid.style.left = '-150px';
+        asteroid.style.left = '-15vw';
         const target = Math.floor(Math.random() * 1701) - 200;
         asteroid.style.top = target + 'px';
         timeout = setTimeout(() => {
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         duration = Math.max(Math.floor(Math.random() * 7), 5);
         asteroid.style.transition = 'left ' + duration + 's linear, top ' + duration +'s linear';
-        asteroid.style.left = '1550px';
+        asteroid.style.left = '115vw';
         const target = Math.floor(Math.random() * 1701) - 200;
         asteroid.style.top = target + 'px';
         timeout = setTimeout(() => {
