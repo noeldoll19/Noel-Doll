@@ -331,6 +331,18 @@ a {
     background-color: #c6b89c;
 }
 
+.game-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-gif{
+    width: 206px;
+    filter: drop-shadow(7px 7px rgba(0, 0, 0, 0.2));
+    padding: 25px;
+}
+
 .screenshot{
     width: 650px;
     height: 335px;
@@ -352,21 +364,19 @@ a {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
 }
 
-.game-extras{
-    display: flex;
-    flex-direction: column;
-    padding: 0 25px 0;
-    justify-content: center;
-    align-items: center;
+#blasteroid-link{
+    padding: 0 50px 0 0;
     filter: drop-shadow(7px 7px rgba(0, 0, 0, 0.2));
-}
 
-.game-description img, .game-description iframe{
-    padding: 25px;
-    width: 206px;
+}
+#felt-knight-link{
+    padding: 0 0 0 50px;
     filter: drop-shadow(7px 7px rgba(0, 0, 0, 0.2));
+
 }
 
+#game-description{
+    width: 650px;
+}
