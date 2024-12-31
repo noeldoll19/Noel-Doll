@@ -374,8 +374,21 @@ a {
     height: 400px;
     align-items: center;
     justify-content: center;
-    animation: pulse 3s linear infinite;
+    flex-direction: column;
     font-weight: 1000;
+    color: #000;
+}
+
+#cover{
+    position: absolute;
+    height: 300px;
+    padding: 25px;
+}
+
+#comingSoon{
+    position: relative;
+    top: 25%;
+    animation: pulse 3s linear infinite;
 }
 
 @keyframes pulse {
