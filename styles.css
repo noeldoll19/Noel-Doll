@@ -215,6 +215,12 @@ a {
     max-height: 400px;
     width: 560px;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+    background-color: #000;
+    transition: transform, 0.5s;
+}
+
+.video iframe:hover{
+    transform: scale(1.12);
 }
 
 #felt iframe{
@@ -246,8 +252,12 @@ a {
 .feltgame img, .feltgame iframe{
     display: block;
     filter: drop-shadow(7px 7px rgba(0, 0, 0, 0.2));
+    transition: transform, 0.5s;
 }
 
+.feltgame iframe:hover{
+    transform: scale(1.12);
+}
 
 @keyframes fromLeft {
     0%{transform: translateX(-1000px);
@@ -379,7 +389,7 @@ a {
     background-color: rgba(0, 0, 0, 0.2);
     padding: 25px;
     border-radius: 25px;
-    transition: transform, background-color, color, 0.5s;
+    transition: transform, background-color, font-weight, color, 0.5s;
     color: #252525;
     margin-bottom: 50px;
 }
@@ -425,8 +435,29 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-right: 50px;
+    margin-right: 50px;
+    animation: spinAndZoom 2s;
+    transition: transform, box-shadow, 0.5s;
+    box-shadow: 7px 7px rgba(0, 0, 0, 0.2);
 }
+
+.albumCover:hover{
+    transform: scale(1.1);
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes spinAndZoom {
+    0%{
+        opacity: 0;
+        transform: rotate(180deg) scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(360deg) scale(1);
+    }
+    
+}
+
 #coverImage{
     max-height: 400px;
 }
@@ -475,4 +506,10 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: transform, color, 0.5s;
+}
+
+.song:hover{
+    transform: scale(1.15);
+    background-color:#739072;
 }
