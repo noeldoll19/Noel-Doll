@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         duration = Math.max(Math.floor(Math.random() * 7), 5);
         asteroid.style.transition = 'left ' + duration + 's linear, top ' + duration +'s linear';
         asteroid.style.left = '-15vw';
-        const target = Math.floor(Math.random() * 1701) - 200;
+        const target = Math.floor(Math.random() * 1501) - 200;
         asteroid.style.top = target + 'px';
         timeout = setTimeout(() => {
             newStart();
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         duration = Math.max(Math.floor(Math.random() * 7), 5);
         asteroid.style.transition = 'left ' + duration + 's linear, top ' + duration +'s linear';
         asteroid.style.left = '115vw';
-        const target = Math.floor(Math.random() * 1701) - 200;
+        const target = Math.floor(Math.random() * 1501) - 200;
         asteroid.style.top = target + 'px';
         timeout = setTimeout(() => {
             newStart();

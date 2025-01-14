@@ -19,6 +19,12 @@ body{
 
 .title{
     color: black;
+    transition: transform, 0.5s;
+}
+
+.title:hover{
+    transform: scale(1.15);
+    text-shadow: 3px 3px  rgba(0, 0, 0, 0.2);
 }
 
 .about{
@@ -244,13 +250,17 @@ a {
 
 
 @keyframes fromLeft {
-    0%{transform: translateX(-1000px);}
-    100%{transform: translateX(0);}
+    0%{transform: translateX(-1000px);
+        opacity: 0;}
+    100%{transform: translateX(0);
+        opacity: 1;}
 }
 
 @keyframes fromRight {
-    0%{transform: translateX(1000px);}
-    100%{transform: translateX(0);}
+    0%{transform: translateX(1000px);
+        opacity: 0;}
+    100%{transform: translateX(0);
+        opacity: 1;}
 }
 
 
@@ -268,23 +278,31 @@ a {
 }
 .socialLinks a{
     color:#4F6F52;
-    transition: color 0.5s;
+    transition: transform, color, 0.5s;
 }
+
 
 #linkedIn:hover{
     color:dodgerblue;
+    transform: scale(1.15);
+
 }
 
 #youtube:hover{
     color:red;
+    transform: scale(1.15);
+
 }
 
 #spotify:hover{
     color: limegreen;
+    transform: scale(1.15);
 }
 
 #home:hover{
     color: #000;
+    transform: scale(1.15);
+
 }
 
 
@@ -323,36 +341,64 @@ a {
     align-items: center;
 }
 
-.game-gif{
-    width: 206px;
-    filter: drop-shadow(7px 7px rgba(0, 0, 0, 0.2));
-    padding: 25px;
-}
-
 .screenshot{
     width: 650px;
     height: 335px;
     object-fit: cover;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+    margin: 25px;
+}
+
+#blasteroidsScreenShot{
+    animation: fromLeft 2s;
+}
+
+#feltKnightScreenShot{
+    animation: fromRight 2s;
 }
 
 .game {
-    flex-direction: column;
     background-color:#c6b89c;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    padding: 50px;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .game-description{
-    padding: 50px;
+    padding: 25px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
-#blasteroid-link{
+.gameLink{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    border-radius: 25px;
+    transition: transform, background-color, color, 0.5s;
+    color: #252525;
+    margin-bottom: 50px;
+}
+
+.gameLink:hover{
+    transform: scale(1.15);
+    font-weight: bolder;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: black;
+    box-shadow: 7px 7px rgba(0, 0, 0, 0.2);
+}
+
+.game-gif{
+    width: 51.5px;
+    filter: drop-shadow(3px 3px rgba(0, 0, 0, 0.2));
+    padding-left: 5px;
+}
+
+/* #blasteroid-link{
     padding: 0 50px 0 0;
     filter: drop-shadow(7px 7px rgba(0, 0, 0, 0.2));
 
@@ -360,12 +406,12 @@ a {
 #felt-knight-link{
     padding: 0 0 0 50px;
     filter: drop-shadow(7px 7px rgba(0, 0, 0, 0.2));
-}
+} */
 
 #game-description{
     width: 650px;
+    margin: 25px;
 }
-
 
 .musicDescription{
     background-color: #c6b89c;
