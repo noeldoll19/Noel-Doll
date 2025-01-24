@@ -152,6 +152,7 @@ a {
     overflow: hidden;
     box-shadow:  4px 6px rgba(0, 0, 0, 0.1);
     transition: width, height, box-shadow, 0.5s;
+    cursor: pointer;
 }
 
 .images img:hover{
@@ -512,4 +513,67 @@ a {
 .song:hover{
     transform: scale(1.15);
     background-color:#739072;
+}
+
+.focus{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85vh;
+    height: 85vh;
+    z-index: 1000;
+    object-fit: cover;
+    box-shadow: 17px 17px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    cursor: pointer;
+    transition: width, height, transform, opacity, 0.3s ease;
+}
+
+.focus:hover{
+    box-shadow: 25px 25px rgba(0, 0, 0, 0.2);
+    width: 90vh;
+    height: 90vh;
+}
+
+.shrink {
+    transform: scale(0); 
+    opacity: 0; 
+}
+
+#veil{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    z-index: 999;
+    transition: opacity 0.5s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.selectorButton{
+    font-size: 5vw;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    width: 5vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform, background-color 0.5s ease;
+    user-select: none;
+}
+
+.selectorButton:hover{
+    background-color: white;
+    transform: scale(1.05);
 }
