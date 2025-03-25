@@ -360,7 +360,7 @@ a {
     margin: 25px;
 }
 
-#blasteroidsScreenShot{
+#blasteroidsScreenShot, #kingScreenshot{
     animation: fromLeft 2s;
 }
 
